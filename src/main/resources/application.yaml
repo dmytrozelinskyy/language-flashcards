@@ -1,0 +1,22 @@
+spring:
+  h2:
+    console:
+      path: /my-console
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:./workspace/dictionary
+    username: sa
+    password:
+  banner:
+    location: "logo-app"
+    charset: UTF-8
+  application:
+    name: Flashcards SD Application
+  profiles:
+    active: original
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
